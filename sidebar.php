@@ -20,10 +20,10 @@ include("slider.php");
             <p class="fa fa-none"></p>
             </section>
             <section class="home">
-                <div class="menu-item"><i class="fa fa-search"></i>Search</div>
-                <div class="menu-item"><i class="fa fa-home"></i>Home</div>
-                <div class="menu-item"><i class="fa fa-bullseye"></i>Live</div>
-                <div class="menu-item"><i class="fa fa-shopping-cart"></i>Subscription Plan</div>
+                <div class="menu-item"><i class="fa fa-search" href="search.php"></i>Search</div>
+                <div class="menu-item"><i class="fa fa-home" href="home.php"></i>Home</div>
+                <div class="menu-item"><i class="fa fa-bullseye" href="live.php"></i>Live</div>
+                <div class="menu-item"><i class="fa fa-shopping-cart" href="Subscriptionplan.php"></i>Subscription Plan</div>
                 <div class=""></div>
               </section>
                 <section class="akun">

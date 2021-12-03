@@ -13,9 +13,7 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="css/home.css">
-
-
-<title>HOME</title>
+    <title>HOME</title>
 </head>
 <body>
   <?php
@@ -24,7 +22,7 @@
   <div id="shell">
   <div class="box">
         <div class="head">
-          <h2 style="	font-size:14px;">LATEST TRAILERS</h2>
+          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
           <p class="text-right"><a href="#">View all</a></p>
         </div>
         <div class="">
@@ -59,7 +57,7 @@
 
 
         <div class="head">
-          <h2>LATEST TRAILERS</h2>
+          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
           <p class="text-right"><a href="#">View all</a></p>
         </div>
         <div class="container-fluid mb-4">
@@ -93,7 +91,7 @@
         </div>
 
         <div class="head">
-          <h2>LATEST TRAILERS</h2>
+          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
           <p class="text-right"><a href="#">View all</a></p>
         </div>
         <div class="container-fluid mb-4">
@@ -127,7 +125,7 @@
         </div>
 
         <div class="head">
-          <h2>LATEST TRAILERS</h2>
+          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
           <p class="text-right"><a href="#">View all</a></p>
         </div>
         <div class="container-fluid mb-4">

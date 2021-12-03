@@ -41,7 +41,7 @@
   <body>
     <!-- Form header  -->
     <div class="container w-50 mt-4" style="color: #f5f1f1">
-      <h3 class="mb-4">Profil</h3>
+      <h3 class="mb-4">Profile</h3>
       <form method="post" >
         <div class="form-group">
           <label>Nama pengguna</label>
