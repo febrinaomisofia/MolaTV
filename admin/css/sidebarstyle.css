@@ -1,0 +1,119 @@
+*, body{
+    margin:0;
+    padding:0;
+}
+body{
+    background: -o-radial-gradient(81.41% 9.17%, 110.62% 196.67%, rgba(150, 205, 255, 0.19) 0%, rgba(28, 32, 38, 0.2) 100%),
+    #101112;
+    background: radial-gradient(110.62% 196.67% at 81.41% 9.17%, rgba(150, 205, 255, 0.19) 0%, rgba(28, 32, 38, 0.2) 100%),
+    #101112;
+    font-family: 'Fira Sans', sans-serif;
+   
+}
+
+p{
+    height: 8rem;
+}
+
+b{
+    padding-left: 25px;
+    font-size: 20px;
+
+}
+
+c{
+    padding-top:1rem;
+
+}
+a:hover,a:focus {
+    text-decoration:none;
+    border-left:0px solid #F7F7F7;
+}
+li{
+   color: #ffffff; 
+}
+
+._1qzw_ {
+    position: absolute;
+    top: 25.6px;
+    top: 1.6rem;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    /* justify-content: center; */
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+    z-index: 105;
+    /* margin-left: 10px; */
+    margin-left: 0.5rem;
+  }
+
+  .mWx3v {
+    height: 40px;
+    /* height: 3.3rem; */
+    width: 40px;
+    /* width: 3.3rem; */
+  }
+
+.main-menu{
+    background-color: rgba(0, 0, 0, 0.9) ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+    width: 70px;
+    height: 100vh;
+
+    position: fixed;
+    top:0;
+    left:0;
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+    transition: .3s ease;
+    
+}
+
+.main-menu:hover{
+    width : 250px;
+    overflow-y: scroll;
+}
+
+.main-menu .menu-item{
+    padding: 10px;
+}
+.main-menu .menu-item:hover{
+    background-color: #c1c2c2;
+    cursor: pointer;
+}
+
+.main-menu .menu-item .fa{
+    color: rgb(255, 255, 255);
+    width:40px;
+    font-size: 25px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    
+}
+
+.main-menu .menu-item:hover > .fa{
+    color: #1d0daa;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 10px;
+  }
