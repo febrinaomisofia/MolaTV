@@ -19,7 +19,7 @@
                 <a href="users.php"><li class="menu-item"><i class="fa fa-user"></i><b>Users</b></li></a>
                 <a href="movies.php"><li class="menu-item"><i class="fa fa-film"></i><b>Movies</b></li></a>
                 <a href="sports.php"><li class="menu-item"><i class="fa fa-soccer-ball-o"></i><b>Sports</b></li></a>
-                <a href="livings.php"> <li class="menu-item"><i class="fa fa-vine"></i><b>Living</b></li></a>
+                <a href="livings.php"><li class="menu-item"><i class="fa fa-vine"></i><b>Living</b></li></a>
                 <a href="kids.php"> <li class="menu-item"><i class="fa fa-child"></i><b>Kids</b></li></a>
             </section>
             <section class="akun">

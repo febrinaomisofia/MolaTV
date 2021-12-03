@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MolaTV</title>
+	<title>MOLA</title>
 </head>
 <body>
 <div class="container">

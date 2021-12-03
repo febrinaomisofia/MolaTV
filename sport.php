@@ -13,7 +13,7 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="css/home.css">
-    <title>HOME</title>
+    <title>MOLA</title>
 </head>
 <body>
   <?php

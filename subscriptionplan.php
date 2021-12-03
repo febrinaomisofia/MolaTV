@@ -13,7 +13,7 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="css/subs.css" rel="stylesheet">
-  <title>Subscription Plan</title>
+  <title>MOLA</title>
 
 </head>
 <body>

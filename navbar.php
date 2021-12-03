@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Navigasi</title>
+    <title>MOLA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style2.css">
@@ -18,13 +18,13 @@
           <a class="nav-link" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="living.php">Living</a>
+          <a class="nav-link" href="living.php">Living</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="sport.php">Sports</a>
+          <a class="nav-link"  href="sport.php">Sports</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="kids.php">Kids</a>
+          <a class="nav-link" href="kids.php">Kids</a>
         </li>
       </ul>
     </nav>
