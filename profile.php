@@ -1,3 +1,6 @@
+<?php
+include("sidebarprofile.php");
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,12 +11,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d370445269.js" crossorigin="anonymous"></script>
     <style type="text/css">
+    body{
+        background: -o-radial-gradient(81.41% 9.17%, 110.62% 196.67%, rgba(150, 205, 255, 0.19) 0%, rgba(28, 32, 38, 0.2) 100%),
+        #101112;
+        background: radial-gradient(110.62% 196.67% at 81.41% 9.17%, rgba(150, 205, 255, 0.19) 0%, rgba(28, 32, 38, 0.2) 100%),
+        #101112;
+        font-family: 'Fira Sans', sans-serif;
+
+    }
       .form-container{
           border-radius: 10px;
-          background-color: rgba(0, 0, 0, 0.3);
+          background-color: -o-radial-gradient(81.41% 9.17%, 110.62% 196.67%, rgba(150, 205, 255, 0.19) 0%, rgba(28, 32, 38, 0.2) 100%),
+          #101112;
           padding: 25px 25px 5px 25px;
       }
 
@@ -33,19 +44,19 @@
       }
     </style>
   </head>
-
   <body>
     <!-- Form header  -->
     <div class="container w-50 mt-4" style="color: #f5f1f1">
       <h3 class="mb-4">Profile</h3>
+      <a class="fa fa-edit" href="editprofile.php">Change</a>
       <form method="post" >
         <div class="form-group">
           <label>User ID</label>
-          <input class="form-control" type="text" name="nama" value="">
+          <input class="form-control" type="text" name="nama" disabled>
         </div>
         <div class="form-group">
           <label>Username</label>
-          <input class="form-control" type="email" name="email" value="">
+          <input class="form-control" type="text" value="" disabled>
         </div>
         <div class="form-group">
           <label>Date Of Birth</label>
@@ -63,8 +74,11 @@
           <label>Phone Number</label>
           <input class="form-control" type="text" value="" disabled>
         </div>
-        <button class="btn btn-primary" type="submit" name="btn-ubah">Simpan</button>
-        <a class="btn btn-danger" type="submit" href="#">Batal</a>
+        <div class="form-group">
+          <label>subscription plan</label>
+          <input class="form-control" type="text" value="" disabled>
+        </div>
+        <a class="btn btn-danger" type="submit" href="#">Logout</a>
       </form>
     </div>
   </div>

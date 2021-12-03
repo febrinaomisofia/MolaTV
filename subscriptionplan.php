@@ -18,7 +18,7 @@
 </head>
 <body>
   <?php
-  include("sidebar1.php");
+  include("sidebarprofile.php");
   ?>
 <div id="pricing" class="pricing-area area-padding">
     <div class="container">
