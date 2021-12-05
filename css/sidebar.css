@@ -12,9 +12,16 @@ body{
 }
 
 p{
-    height: 8rem;
+    height: 13rem;
+}
+p1{
+    height: 30rem;
 }
 
+b1{
+    font-size: 18px !important;
+    margin-left: 20px !important;
+}
 li{
    color: #ffffff;
 }

@@ -12,18 +12,19 @@
 include("navbarprofile.php");
 ?>
 <div class="main-menu">
-    <div class="_1qzw_"><img src="img/mola.png" alt="logo Mola" class="mWx3v" style="color: white; font-weight: bold; font-size: 18px;">MOLA</div>
+    <div class="_1qzw_"><img src="img/mola.png" alt="logo Mola" class="mWx3v"> <a href="home.php" style="color: white; font-weight: bold; font-size: 18px;"><b1>MOLA</b1></a></div>
     <p class="fa fa-none"></p>
     </section>
     <section class="home">
-        <div class="menu-item" ><i class="fa fa-search"></i><a href="search.php" style="color: white;">Search</a></div>
-        <div class="menu-item"><i class="fa fa-home"></i><a href="home.php" style="color: white;">Home</a></div>
-        <div class="menu-item"><i class="fa fa-shopping-cart"></i><a href="subscriptionplan.php" style="color: white;">Subscription Plan</a></div>
+        <div class="menu-item" ><i class="fa fa-search"></i><a href="search.php" style="color: white;"><b1>Search</b1></a></div>
+        <div class="menu-item"><i class="fa fa-home"></i><a href="home.php" style="color: white;"><b1>Home</b1></a></div>
+        <div class="menu-item"><i class="fa fa-shopping-cart"></i><a href="subscriptionplan.php" style="color: white;"><b1>Subscription Plan</b1></a></div>
       </section>
         <section class="akun">
         <p class="fa fa-none"></p>
-        <div class="menu-item"><i class="fa fa-user-o"></i><a href="profile.php" style="color: white;">Profile</a></div>
+        <div class="menu-item"><i class="fa fa-user-o"></i><a href="profile.php" style="color: white;"><b1>Profile</b1></a></div>
     </section>
 </div>
+
 </body>
 </html>
