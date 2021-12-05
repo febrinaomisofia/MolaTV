@@ -1,4 +1,7 @@
 <?php
+  include("include/koneksi.php");
+ ?>
+<?php
 include("sidebarprofile.php");
 ?>
 <!DOCTYPE html>

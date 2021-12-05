@@ -1,3 +1,8 @@
+<?php
+  include("include/koneksi.php");
+  include("include/logincheck.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

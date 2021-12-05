@@ -1,3 +1,8 @@
+<?php include ("include/koneksi.php");
+if(isset($_SESSION['user'])){
+  header ("Location: home.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,18 +15,19 @@
 <body>
 	<div class="header">
 		<h2>Login</h2>
+		<?php include ("function/functionlogin.php");?>
 	</div>
-	<form method="post" action="login.php">
+	<form method="post" novalidate>
 		<div class="input-group">
-			<label>Username</label>
+			<label for="username">Username</label>
 			<input type="text" name="username" required>
 		</div>
 		<div class="input-group">
-			<label>Password</label>
-			<input type="password" name="password_1" required>
+			<label for="password">Password</label>
+			<input type="password" name="password" required>
 		</div>
 		<div class="input-group">
-			<button type="submit" name="login" class="btn">Login</button>
+			<button type="submit" name="btn-login" class="btn">Login</button>
 		</div>
 		<p>
 			Belum punya akun? <a href="registrasi.php" style="color: #ffffff">Buat Akun</a>

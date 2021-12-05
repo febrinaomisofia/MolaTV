@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<?php
-include("navbarprofile.php");
-?>
 <div class="main-menu">
     <div class="_1qzw_"><img src="img/mola.png" alt="logo Mola" class="mWx3v" style="color: white; font-weight: bold; font-size: 18px;">MOLA</div>
     <p class="fa fa-none"></p>
