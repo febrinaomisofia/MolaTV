@@ -1,3 +1,14 @@
+<?php
+  include("include/koneksi.php");
+
+  $id = $_GET['id'];
+
+  if (empty($_SESSION['username'])) {
+    header ("Location: error.php");
+    die;
+  }
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,16 +26,16 @@
     <nav class="navbar navbar-expand-sm justify-content-center">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="home.php">Home</a>
+          <a class="nav-link" href="home.php"id=<?=$id?>>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="living.php">Living</a>
+          <a class="nav-link" href="living.php"id=<?=$id?>>Living</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  href="sport.php">Sports</a>
+          <a class="nav-link"  href="sport.php"id=<?=$id?>>Sports</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="kids.php">Kids</a>
+          <a class="nav-link" href="kids.php"id=<?=$id?>>Kids</a>
         </li>
       </ul>
     </nav>

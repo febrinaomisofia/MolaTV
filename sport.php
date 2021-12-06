@@ -1,3 +1,7 @@
+<?php
+  include("include/koneksi.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +33,7 @@
           <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="sinopsis.php"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
               </div>
             </div>
             <div class="col mt-4">
@@ -168,7 +172,27 @@
   </div>
 </div>
 
+<script type="text/javascript">
+    // Javascrip bootstrap 4 dismissable alert
+    $('.alert').alert();
 
+  // Boottrap 4 validation
+  (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+</script>
 
 </body>
 
