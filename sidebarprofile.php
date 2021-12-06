@@ -21,7 +21,6 @@ include("navbarprofile.php");
         <div class="menu-item"><i class="fa fa-shopping-cart"></i><a href="subscriptionplan.php" style="color: white;"><b1>Subscription Plan</b1></a></div>
       </section>
         <section class="akun">
-        <p class="fa fa-none"></p>
         <div class="menu-item"><i class="fa fa-user-o"></i><a href="profile.php" style="color: white;"><b1>Profile</b1></a></div>
     </section>
 </div>
