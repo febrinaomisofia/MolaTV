@@ -1,88 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;500&display=swap"
-      rel="stylesheet"/>
-    <link href="custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d370445269.js" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sinopsis.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+          integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Movie page</title>
   </head>
-
   <body>
-    <!-- HEADER -->
-
-  <div class="container-fluid">
-    <!-- SUGGEST SECTION  -->
-
-    <div class="container-fluid mt-3">
-      <h3 style="color: white;">Yang mungkin Anda sukai</h3>
-      <div class="row d-flex justify-content-center">
-        <div class=" col-3 mr-4 mb-5 gmbr-utama">
-          <a type="button" data-toggle="modal" data-target="#">
-            <img src="#"  alt="">
-          </a>
-        </div>
-        <div class="modal fade" id="#" role="dialog">
-          <div class="modal-dialog modal-dialog-centered" style="background: #221f1f;">
-            <div class="modal-content" style="background: #221f1f;">
-              <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" style="color: white;">&times;</span>
-              </button>
-              <div class="modal-body text-left">
-                  <div class="card mb-3" style="background: #221f1f; color: white;">
-                    <img class="card-img-top" src="#" alt="Card image cap">
-                    <div class="card-body">
-                      <ul class="modal__btns row">
-                        <li>
-                          <a class="modal__btn modal__btn--play ml-3">
-                            <button ion-button icon-only onclick="location.href='#';" value="Movie Trailer">
-                              <ion-icon name="play"></ion-icon>
-                            </button>
-                          </a>
-                          <a href="#" class="modal__btn" style="color: white;">
-                            <ion-icon name="add"></ion-icon>
-                            <span class="tool-tip">
-                              Add to Favorite
-                            </span>
-                          </a>
-                          <a class="modal__btn">
-                            <ion-icon name="thumbs-up-outline"></ion-icon>
-                            <span class="tool-tip">
-                              I like this
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                      <ul class="modal__ratings row">
-                        <p class="modal__pg ml-3"></p>
-                        <p class="modal__season ml-3"></p>
-                      </ul>
-                      <ul class="modal__categories row">
-                        <p class="modal__category ml-3"></p>
-                      </ul>
-                      <p class="card-text"></p>
+  <?php
+  include("sidebarsinopsis.php");
+  ?>
+    <section class="tv-content">
+      <div class="tv-content">
+        <div class="content">
+          <div class="image">
+            <img style="width:14.5cm" style="height:29cm" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/or06FN3Dka5tukK1e9sl16pB3iy.jpg" />
+          </div>
+          <div class="info">
+            <div class="title">
+              <a1 href="#">
+                <h2>Avengers: Endgame</h2>
+              </a1>
+              <span>(2019)</span>
+            </div>
+            <div class="meta-actions">
+              <div class="score">
+                <!-- <div class="percentage-circle">
+                  <div class="percentage-circle-stroke">
+                    <div class="percent">
+                      <span>0<sup>%</sup>
+                      </span>
                     </div>
                   </div>
+                </div>
+                <h1>User
+                  <br>
+                  Score</h1> -->
               </div>
+              <ul>
+                <li class="add-to-list">
+                  <a1 href= "#">
+                  <div class="tooltip"><i class="fas fa-list fa-2x"></i>
+                    <span class="tooltiptext">Add to List</span>
+                  </div></a1>
+                </li>
+                <li class="favorite">
+                  <a1 href= "#">
+                  <div class="tooltip"><i class="fas fa-heart fa-2x"></i>
+                    <span class="tooltiptext">Favorite</span>
+                  </div></a1>
+                </li>
+                <li class="add-to-watchlist">
+                  <a1 href= "#">
+                  <div class="tooltip"><i class="fas fa-bookmark fa-2x"></i>
+                  <span class="tooltiptext">Add to Watchlist</span>
+                  </div></a1>
+                </li>
+                <li class="play-trailer">
+                <a1 href="#">
+                <div class="tooltip"><i class="fas fa-play fa-2x"></i>
+                <span class="tooltiptext">Play</span>
+                  </div></a1>
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
+            <div class="about">
+              <div class="overview">
+                <h3>Overview</h3>
+                <p1>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.</p>
+              </div>
+              <div class="featured-crew">
+                <h3>Cast:</h3>
+                <ul>
+                  <li>
+                    <p1>
+                      <a1 href="#">Robert Downey Jr.</a1>
+                    <h5>Actor</h5>
+                  </p1>
+                </li>
+          </ul>
+      </div>
       </div>
     </div>
   </div>
-
-  <script src="js/main.js"></script>
-  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-  <script src=",yscript.js"></script>
-  <script src="https://kit.fontawesome.com/d370445269.js" crossorigin="anonymous"></script>
-
+</div>
+</section>
+</body>
+</html>
+<!-- partial -->
+  
 </body>
 </html>

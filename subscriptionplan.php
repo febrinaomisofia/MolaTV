@@ -43,7 +43,7 @@
             <h5>Start From</h5>
             <h3><b>Rp 50,000</h3>
             <br>
-            <button type="button" class="btn btn-info">Checkout</button>
+            <button type="button" class="third">Checkout</button>
             <!-- <div><span id="fullread"></span><span id="selengkapnya"> -->
             <br>
             <h6><b>Benefits</h6>
@@ -84,7 +84,7 @@
             <h5>Start From</h5>
             <h3><b>Rp 60,000</h3>
             <br>
-            <button type="button" class="btn btn-info">Checkout</button>
+            <button type="button" class="third1">Checkout</button>
             <br>
             <h6><b>Benefits</h6>
             <ol>
@@ -125,7 +125,7 @@
             <h5>Start From</h5>
             <h3><b>Rp 90,000</h3>
             <br>
-            <button type="button" class="btn btn-info">Checkout</button>
+            <button type="button" class="third2">Checkout</button>
             <br>
             <h6><b>Benefits</h6>
             <ol>
@@ -161,7 +161,7 @@
             <h5>Start From</h5>
             <h3><b>Rp 160,000</h3>
             <br>
-            <button type="button" class="btn btn-info">Checkout</button>
+            <button type="button" class="third3">Checkout</button>
             <br>
             <h6><b>Benefits</h6>
             <ol>
@@ -186,36 +186,10 @@
             </ol>
           </div>
         </div>
+<!-- partial -->
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js'></script>
+<script  src="js/checkout.js"></script>
 
-
-        <!-- <div id="pricing" class="pricing-area area-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-          <button onclick="fullcomparison()" id="fullreadcode">Baca selengkapnya</button>
-          </div>
-        </div>
-      </div> -->
-
-
-<!-- <script>
-function fullcomparison() {
-  var fullread = document.getElementById("fullread");
-  var selengkapnyaText = document.getElementById("selengkapnya");
-  var jagoankodecool = document.getElementById("fullreadcode");
-
-  if (fullread.style.display === "none") {
-    fullread.style.display = "inline";
-    jagoankodecool.innerHTML = "Baca selengkapnya";
-    selengkapnyaText.style.display = "none";
-  } else {
-    fullread.style.display = "none";
-    jagoankodecool.innerHTML = "Sembunyikan";
-    selengkapnyaText.style.display = "inline";
-  }
-}
-</script> -->
 
 </body>
 </html>
