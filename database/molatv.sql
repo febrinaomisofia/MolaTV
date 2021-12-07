@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2021 at 02:06 PM
+-- Generation Time: Dec 07, 2021 at 03:28 PM
 -- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -252,14 +252,14 @@ ALTER TABLE `genre`
 -- Indexes for table `subs_plan`
 --
 ALTER TABLE `subs_plan`
-  ADD PRIMARY KEY (`id_subscription_plan`);
+  ADD PRIMARY KEY (`id_subscription_plan`) USING BTREE;
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `id_subscription_plan` (`id_subscription_plan`);
+  ADD KEY `id_subscription_plan` (`id_subscription_plan`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -306,6 +306,24 @@ ALTER TABLE `subs_plan`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `favorite`
+--
+ALTER TABLE `favorite`
+  ADD CONSTRAINT `favorite_ibfk_1` FOREIGN KEY (`id_film`) REFERENCES `film` (`id_film`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `favorite_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `film`
+--
+ALTER TABLE `film`
+  ADD CONSTRAINT `film_ibfk_1` FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id_genre`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `film_ibfk_2` FOREIGN KEY (`id_batas_usia`) REFERENCES `batas_usia` (`id_batas_usia`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
