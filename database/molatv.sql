@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2021 at 11:18 AM
+-- Generation Time: Dec 07, 2021 at 02:06 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -172,15 +172,15 @@ INSERT INTO `genre` (`id_genre`, `genre`) VALUES
 --
 
 CREATE TABLE `subs_plan` (
-  `id_subs` int(11) NOT NULL,
-  `subs` varchar(20) NOT NULL
+  `id_subscription_plan` int(11) NOT NULL,
+  `subscription_plan` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `subs_plan`
 --
 
-INSERT INTO `subs_plan` (`id_subs`, `subs`) VALUES
+INSERT INTO `subs_plan` (`id_subscription_plan`, `subscription_plan`) VALUES
 (1, 'entertaiment'),
 (2, 'single steam'),
 (3, 'double steam'),
@@ -200,14 +200,14 @@ CREATE TABLE `user` (
   `gender` enum('M','F') NOT NULL,
   `email` varchar(30) NOT NULL,
   `phone_number` varchar(12) NOT NULL,
-  `id_subscription` int(11) NOT NULL
+  `id_subscription_plan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `user_pass`, `date_of_birth`, `gender`, `email`, `phone_number`, `id_subscription`) VALUES
+INSERT INTO `user` (`user_id`, `username`, `user_pass`, `date_of_birth`, `gender`, `email`, `phone_number`, `id_subscription_plan`) VALUES
 (1, 'febrinaomi', 'febrinaomi123', '2002-02-16', 'F', 'febrinaomi@gmail.com', '082367463593', 0);
 
 --
@@ -230,13 +230,17 @@ ALTER TABLE `batas_usia`
 -- Indexes for table `favorite`
 --
 ALTER TABLE `favorite`
-  ADD PRIMARY KEY (`id_favorite`);
+  ADD PRIMARY KEY (`id_favorite`),
+  ADD UNIQUE KEY `id_user` (`id_user`),
+  ADD UNIQUE KEY `id_film` (`id_film`);
 
 --
 -- Indexes for table `film`
 --
 ALTER TABLE `film`
-  ADD PRIMARY KEY (`id_film`);
+  ADD PRIMARY KEY (`id_film`),
+  ADD KEY `id_batas_usia` (`id_batas_usia`),
+  ADD KEY `id_genre` (`id_genre`);
 
 --
 -- Indexes for table `genre`
@@ -248,13 +252,14 @@ ALTER TABLE `genre`
 -- Indexes for table `subs_plan`
 --
 ALTER TABLE `subs_plan`
-  ADD PRIMARY KEY (`id_subs`);
+  ADD PRIMARY KEY (`id_subscription_plan`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `id_subscription_plan` (`id_subscription_plan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -294,7 +299,7 @@ ALTER TABLE `genre`
 -- AUTO_INCREMENT for table `subs_plan`
 --
 ALTER TABLE `subs_plan`
-  MODIFY `id_subs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_subscription_plan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
