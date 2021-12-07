@@ -1,5 +1,8 @@
-<?php include ("include/koneksi.php");
+<?php
+    include ("../include/koneksi.php");
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

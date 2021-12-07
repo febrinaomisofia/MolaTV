@@ -1,9 +1,6 @@
 <?php
-  include ("include/koneksi.php");
-?>
-
-<?php
-include("sidebar.php");
+    include ("../include/koneksi.php");
+    include("sidebar.php");
 ?>
 
 <!DOCTYPE html>
@@ -70,8 +67,8 @@ include("sidebar.php");
 					<td><?php echo $pecah['pemeran_film']; ?></td>
 					<td><?php echo $pecah['batas_usia']; ?></td>
           <td>
-            <a href="#editdataModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="function/hapusfilm.php?id=<?php echo $pecah['id_film'];?>" onclick="return confirm('Apakah yakin ingin menghapus?'"  class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+            <a href="editfilm.php?id=<?php echo $pecah['id_film'];?>" class="btn-upl" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="function/hapusfilm.php?id=<?php echo $pecah['id_film'];?>" onclick="return confirm('Apakah yakin ingin menghapus?')"  class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
           </td>
         </tr>
       </tbody>
@@ -93,7 +90,7 @@ include("sidebar.php");
   </div>
 </div>
 <!-- Edit Modal HTML -->
-<div id="adddataModal" class="modal fade">
+<!-- <div id="adddataModal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
       <form>
@@ -138,7 +135,7 @@ include("sidebar.php");
       </form>
     </div>
   </div>
-</div>
+</div> -->
 <!-- Edit Modal HTML -->
 <div id="editdataModal" class="modal fade">
   <div class="modal-dialog">

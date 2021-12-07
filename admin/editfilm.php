@@ -1,10 +1,11 @@
 <?php
-  include ("include/koneksi.php");
+  include ("../include/koneksi.php");
 
   $id = $_GET['id'];
 
   $query = mysqli_query($koneksi, "SELECT * FROM film  WHERE id_film = $id");
   $pecah = mysqli_fetch_array($query);
+
 ?>
 
 <?php
@@ -32,25 +33,25 @@ include("sidebar.php");
       <div class="bg-card w-75 mb-5">
           <div class="card-header"><strong><h4>Edit Film</h4></strong></div>
       </div>
-      <form action="function/editfilm.php?id=<?=$id?>" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+      <form action="function/functioneditfilm.php?id=<?=$id?>" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
           <div class="row">
               <div class="col-6">
                   <div class="form-group row">
                       <label class="col-sm-3 col-form-label">Judul Film</label>
                       <div class="col-sm-9">
-                          <input class="form-control" type="text" name="jdl_film" value="<?php echo $pecah['judul_film']; ?>" required>
+                          <input class="form-control" type="text" name="judul_film" value="<?php echo $pecah['judul_film']; ?>" required>
                       </div>
                   </div>
                   <div class="form-group row">
                       <label class="col-sm-3 col-form-label">Tahun Rilis</label>
                       <div class="col-sm-9">
-                          <input class="form-control" type="text" name="thn_rilis" value="<?php echo $pecah['tahun_film']; ?>" required>
+                          <input class="form-control" type="text" name="tahun_rilis" value="<?php echo $pecah['tahun_film']; ?>" required>
                       </div>
                   </div>
                   <div class="form-group row">
                       <label class="col-sm-3 col-form-label">Batas Usia</label>
                       <div class="col-sm-9 aa">
-                          <select class="form-control" name="bts_usia" required>
+                          <select class="form-control" name="batas_usia" required>
                               <option value="" hidden>Pilih Batas Usia</option>
                                   <?php
                                       $optionB = "SELECT * FROM batas_usia";
@@ -110,10 +111,10 @@ include("sidebar.php");
                   <div class="form-group row">
                       <label class="col-sm-3 col-form-label">Trailer</label>
                       <div class="col-sm-9">
-                          <input class="form-control" type="link" name="trailer_film" value="<?php echo $pecah['trailer_film']; ?>">
+                          <input class="form-control" type="link" name="trailer_film" value="<?php echo $pecah['treiler_film']; ?>">
                       </div>
                   </div>
-                  <button class="btn float-right mt-3 mb-3" type="submit" name="btn-upl">Simpan</button>
+                  <button class="btn float-right mt-3 mb-3" type="submit" name="btn-upl" >Simpan</button>
               </div>
           </div>
       </form>

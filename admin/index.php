@@ -1,5 +1,5 @@
 <?php
-  include ("include/koneksi.php");
+  include ("../include/koneksi.php");
 ?>
 
 <?php

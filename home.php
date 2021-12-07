@@ -35,45 +35,41 @@
           <p class="text-right"><a href="#">View all</a></p>
         </div>
         <?php
-      $query = mysqli_query($koneksi, "SELECT * FROM film ;");
+      $query = mysqli_query($koneksi, "SELECT * FROM film WHERE id_genre = 3 ;");
       foreach ($query as $q):
     ?>
         <div class="">
           <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
             <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
-              </div>
-            </div>
+              <ul>
+                  <a target="_blank" href="sinopsis.php">
+                    <img src="<?= "img/film/".$q['poster_film']?>"  alt="">
+                  </a>
+                  <a target="_blank" href="img2/p3.jpg">
+                    <img class="olahraga" src="img2/p3.jpg" alt="Forest" >
+                  </a>
+                  <a target="_blank" href="img2/p3.jpg">
+                    <img class="olahraga" src="img2/p3.jpg" alt="Forest" >
+                  </a>
+                  <a target="_blank" href="img2/p3.jpg">
+                    <img class="olahraga" src="img2/p3.jpg" alt="Forest" >
+                  </a>
+                  <a target="_blank" href="img2/p3.jpg">
+                    <img class="olahraga" src="img2/p3.jpg" alt="Forest" >
+                  </a>
+                  <a target="_blank" href="img2/p3.jpg">
+                    <img class="olahraga" src="img2/p3.jpg" alt="Forest" >
+                  </a>
+              </ul>
 
           </div>
         </div>
         <?php
           endforeach;
-        ?>,
+        ?>
         <div class="cl">&nbsp;</div>
       </div>
-
+href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt="">
 
 
   <div id="footer">
