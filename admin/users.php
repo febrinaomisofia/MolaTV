@@ -48,10 +48,12 @@ include("sidebar.php");
           <th>Aksi</th>
         </tr>
       </thead>
-        <?php $query = mysqli_query($koneksi, "SELECT * FROM user a, paket b WHERE a.id_paket = b.id_paket"); ?>
-        <?php $user_id = 1;?>
+        <?php $query = mysqli_query($koneksi, "SELECT * FROM user a, subs_plan b WHERE a.id_subscription_plan = b.id_subscription_plan"); ?>
+        <?php $id_user = 1;?>
         <?php foreach ($query as $pecah) : ?>
       <tbody>
+
+
         <tr>
 					<td><?php echo $pecah['user_id']; ?></td>
           <td><?php echo $pecah['username']; ?></td>
@@ -59,12 +61,12 @@ include("sidebar.php");
           <td><?php echo $pecah['date_of_birth']; ?></td>
           <td><?php echo $pecah['gender']; ?></td>
           <td><?php echo $pecah['phone_number']; ?></td>
-          <td><?php echo $pecah['paket']; ?></td>
+          <td><?php echo $pecah['subscription_plan']; ?></td>
           <td>
           </td>
         </tr>
       </tbody>
-      <?php $user_id++; ?>
+      <?php $id_user++; ?>
 			<?php endforeach; ?>
 
     </table>
