@@ -35,7 +35,7 @@
           <p class="text-right"><a href="#">View all</a></p>
         </div>
         <?php
-      $query = mysqli_query($koneksi, "SELECT * FROM film WHERE id_film=id_genre");
+      $query = mysqli_query($koneksi, "SELECT * FROM film ;");
       foreach ($query as $q):
     ?>
         <div class="">
