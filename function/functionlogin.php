@@ -18,11 +18,10 @@ if(isset($_POST['btn-login'])) {
             $email = $row['email'];
             $phonenumber = $row['phone_number'];
 
-            header("location: home.php?id=".$id);
             $_SESSION['id_user'] = $id;
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
-            die;
+            header("location: home.php");
         }
     } else {
         echo

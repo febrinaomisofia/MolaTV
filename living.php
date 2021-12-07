@@ -1,6 +1,11 @@
 <?php
-  include("include/koneksi.php");
- ?>
+  include ("include/koneksi.php");
+
+  if (!isset($_SESSION['username'])) {
+    header ("Location: error.php");
+    die;
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +38,8 @@
           <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="sinopsis.php"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><?php  echo "Nilai Session " . $_SESSION['id_user'] . $_SESSION['username'] . $_SESSION['email'] ."<br>";
+;?></a> </div>
               </div>
             </div>
             <div class="col mt-4">

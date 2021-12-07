@@ -16,11 +16,14 @@
     ?>
     <div class="wrap">
       <div class="search">
-         <input type="text" class="searchTerm" placeholder="Search for videos, movies, live broadcasts, and more ..">
+         <input type="text" class="form-control my-2" placeholder="Search for videos, movies, live broadcasts, and more .." name="keyword" id="keyword"  autofocus autocomplete="off">
          <button type="submit" class="searchButton">
            <i class="fa fa-search"></i>
         </button>
       </div>
    </div>
+   <script type="text/javascript" src="js/search.js">
+
+   </script>
   </body>
 </html>

@@ -1,4 +1,15 @@
 <?php
+  include("include/koneksi.php");
+
+  $id = $_GET['id'];
+
+  if (empty($_SESSION['user'])) {
+    header ("Location: error.php");
+    die;
+  }
+ ?>
+
+<?php
 include("sidebarprofile.php");
 ?>
 <!DOCTYPE html>

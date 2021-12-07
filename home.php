@@ -1,13 +1,11 @@
 <?php
-  include("include/koneksi.php");
+  include ("include/koneksi.php");
 
-  $id = $_GET['id'];
-
-  if (empty($_SESSION['username'])) {
+  if (!isset($_SESSION['username'])) {
     header ("Location: error.php");
     die;
   }
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,143 +31,49 @@
   <div id="shell">
   <div class="box">
         <div class="head">
-          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
+          <h2 style="	font-size:14px; color: white;">Comedy</h2>
           <p class="text-right"><a href="#">View all</a></p>
         </div>
+        <?php
+      $query = mysqli_query($koneksi, "SELECT * FROM film WHERE id_film=id_genre");
+      foreach ($query as $q):
+    ?>
         <div class="">
           <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="sinopsis.php"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
               </div>
             </div>
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
               </div>
             </div>
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
               </div>
             </div>
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
               </div>
             </div>
             <div class="col mt-4">
               <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
+                  <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="sinopsis.php"><img src="<?= "img/film/".$q['poster_film']?>"  alt=""></a></div>
               </div>
             </div>
+
           </div>
         </div>
-
-
-        <div class="head">
-          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
-          <p class="text-right"><a href="#">View all</a></p>
-        </div>
-        <div class="container-fluid mb-4">
-          <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="head">
-          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
-          <p class="text-right"><a href="#">View all</a></p>
-        </div>
-        <div class="container-fluid mb-4">
-          <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="head">
-          <h2 style="	font-size:14px; color: white;">LATEST TRAILERS</h2>
-          <p class="text-right"><a href="#">View all</a></p>
-        </div>
-        <div class="container-fluid mb-4">
-          <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-            <div class="col mt-4">
-              <div class="movie">
-                  <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="https://i0.wp.com/disneymovieslist.com/wp-content/uploads/2017/12/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg?fit=800%2C1200&ssl=1" alt="" /></a> </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php
+          endforeach;
+        ?>,
         <div class="cl">&nbsp;</div>
       </div>
+
 
 
   <div id="footer">

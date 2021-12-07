@@ -3,10 +3,10 @@
 
   $id = $_GET['id'];
 
-  if (empty($_SESSION['username'])) {
+/*  if (empty($_SESSION['user'])) {
     header ("Location: error.php");
     die;
-  }
+  }*/
  ?>
 
 <!DOCTYPE html>
