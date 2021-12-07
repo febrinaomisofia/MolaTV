@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2021 at 08:56 PM
+-- Generation Time: Dec 07, 2021 at 11:18 AM
 -- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,6 +32,13 @@ CREATE TABLE `admin` (
   `admin_name` varchar(30) NOT NULL,
   `admin_pass` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `admin_name`, `admin_pass`) VALUES
+(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -161,13 +168,23 @@ INSERT INTO `genre` (`id_genre`, `genre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket`
+-- Table structure for table `subs_plan`
 --
 
-CREATE TABLE `paket` (
-  `id_paket` int(11) NOT NULL,
-  `paket` varchar(255) NOT NULL
+CREATE TABLE `subs_plan` (
+  `id_subs` int(11) NOT NULL,
+  `subs` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `subs_plan`
+--
+
+INSERT INTO `subs_plan` (`id_subs`, `subs`) VALUES
+(1, 'entertaiment'),
+(2, 'single steam'),
+(3, 'double steam'),
+(4, 'family steam');
 
 -- --------------------------------------------------------
 
@@ -191,8 +208,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `user_pass`, `date_of_birth`, `gender`, `email`, `phone_number`, `id_subscription`) VALUES
-(1, 'febrinaomi', 'febrinaomi123', '2002-02-16', 'F', 'febrinaomi@gmail.com', '082367463593', 0),
-(2, 'febrinaomi', 'febrinaomi123', '2002-02-16', 'F', 'febrinaomi@gmail.com', '082367463593', 0);
+(1, 'febrinaomi', 'febrinaomi123', '2002-02-16', 'F', 'febrinaomi@gmail.com', '082367463593', 0);
 
 --
 -- Indexes for dumped tables
@@ -229,10 +245,10 @@ ALTER TABLE `genre`
   ADD PRIMARY KEY (`id_genre`);
 
 --
--- Indexes for table `paket`
+-- Indexes for table `subs_plan`
 --
-ALTER TABLE `paket`
-  ADD PRIMARY KEY (`id_paket`);
+ALTER TABLE `subs_plan`
+  ADD PRIMARY KEY (`id_subs`);
 
 --
 -- Indexes for table `user`
@@ -248,7 +264,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `batas_usia`
@@ -275,10 +291,10 @@ ALTER TABLE `genre`
   MODIFY `id_genre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `paket`
+-- AUTO_INCREMENT for table `subs_plan`
 --
-ALTER TABLE `paket`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `subs_plan`
+  MODIFY `id_subs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`

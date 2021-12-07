@@ -1,4 +1,8 @@
 <?php
+  include ("include/koneksi.php");
+?>
+
+<?php
 include("sidebar.php");
 ?>
 
@@ -7,7 +11,7 @@ include("sidebar.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
+    <title>MOLA</title>
     <link rel="stylesheet" href="css/users.css">
     <script src="js/users.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,53 +30,53 @@ include("sidebar.php");
           <h2><b>Data Movies</b></h2>
         </div>
         <div class="col-sm-6">
-          <a href="#adddataModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Show</span></a>
-          <a href="#deletedataModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus</span></a>
+          <a href="#adddataModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Film</span></a>
         </div>
       </div>
     </div>
     <table class="table table-striped table-hover">
       <thead>
         <tr>
-          <th>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="selectAll">
-								<label for="selectAll"></label>
-							</span>
-          </th>
           <th>No</th>
           <th>Judul</th>
           <th>Durasi</th>
+          <th>Tahun</th>
           <th>Genre</th>
-          <th>Sinopsis</th>
+          <th>Deskripsi</th>
           <th>Trailer</th>
           <th>Cast</th>
+          <th>Batas Usia</th>
           <th>Aksi</th>
         </tr>
       </thead>
+      <?php $query = mysqli_query($koneksi, "SELECT * FROM film a, genre b, batas_usia c WHERE a.id_genre = b.id_genre AND a.id_batas_usia = c.id_batas_usia"); ?>
+        <?php $no = 1;?>
+        <?php foreach ($query as $pecah) : ?>
       <tbody>
         <tr>
-          <td>
+          <!-- <td>
             <span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
 							</span>
-          </td>
-          <td>1</td>
-          <td>BEE Movie</td>
-          <td>1h26m</td>
-          <td>Animation</td>
-          <td>Fresh out of college,
-            Barry the Bee (Jerry Seinfeld) finds the
-            prospect of working with honey uninspiring.</td>
-          <td>Trailer</td>
-          <td>JERRY SEINFELD</td>
+          </td> -->
+          <td><?php echo $no; ?></td>
+					<td><?php echo $pecah['judul_film']; ?></td>
+          <td><?php echo $pecah['durasi_film']; ?></td>
+          <td><?php echo $pecah['tahun_film']; ?></td>
+          <td><?php echo $pecah['genre']; ?></td>
+          <td><?php echo $pecah['deskripsi_film']; ?></td>
+          <td><?php echo $pecah['treiler_film']; ?></td>
+					<td><?php echo $pecah['pemeran_film']; ?></td>
+					<td><?php echo $pecah['batas_usia']; ?></td>
           <td>
             <a href="#editdataModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deletedataModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+            <a href="function/hapusfilm.php?id=<?php echo $pecah['id_film'];?>" onclick="return confirm('Apakah yakin ingin menghapus?'"  class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
           </td>
         </tr>
       </tbody>
+      <?php $no++; ?>
+			<?php endforeach; ?>
     </table>
     <div class="clearfix">
       <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
@@ -94,7 +98,7 @@ include("sidebar.php");
     <div class="modal-content">
       <form>
         <div class="modal-header">
-          <h4 class="modal-title">Tambah Show</h4>
+          <h4 class="modal-title">Tambah Film</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
@@ -115,7 +119,7 @@ include("sidebar.php");
             <input type="text" class="form-control" required>
           </div>
           <div class="form-group">
-            <label>Sinopsis</label>
+            <label>Deskripsi</label>
             <input type="text" class="form-control" required>
           </div>
           <div class="form-group">
@@ -167,7 +171,7 @@ include("sidebar.php");
           </div>
           <div class="form-group">
             <label>Trailer</label>
-            <input type="file" class="form-control" required>
+            <input type="text" class="form-control" required>
           </div>
           <div class="form-group">
             <label>Cast</label>
@@ -197,7 +201,7 @@ include("sidebar.php");
         </div>
         <div class="modal-footer">
           <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-          <input type="submit" class="btn btn-danger" value="Delete">
+          <input type="submit" class="btn btn-danger" value="Delete" href="function/hapusfilm.php?id=<?php echo $pecah['id_film'];?>">
         </div>
       </form>
     </div>

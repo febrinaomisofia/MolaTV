@@ -1,4 +1,8 @@
 <?php
+  include ("include/koneksi.php");
+?>
+
+<?php
 include("sidebar.php");
 ?>
 <!DOCTYPE html>
@@ -55,7 +59,7 @@ include("sidebar.php");
             </div>
         </div>
     </div>
-    
+
 
 </body>
 </html>

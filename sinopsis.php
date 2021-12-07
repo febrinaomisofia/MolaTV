@@ -1,3 +1,11 @@
+<?php
+  include ("include/koneksi.php");
+
+  if (!isset($_SESSION['username'])) {
+    header ("Location: error.php");
+    die;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,20 +23,28 @@
   include("sidebarsinopsis.php");
   ?>
     <section class="tv-content">
+      <?php
+      $query = mysqli_query($koneksi, "SELECT * FROM film");
+      foreach ($query as $q):
+      ?>
       <div class="tv-content">
+        <?php
+                $id_film = $q['id_film'];
+                $detfilm = mysqli_query($koneksi, "SELECT * FROM film a, genre b, batas_usia c WHERE id_film = $id_film AND a.id_genre = b.id_genre AND a.id_batas_usia = c.id_batas_usia");
+                          foreach ($detfilm as $film) {
+              ?>
         <div class="content">
           <div class="image">
-            <img style="width:14.5cm" style="height:29cm" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/or06FN3Dka5tukK1e9sl16pB3iy.jpg" />
+            <img class="card-img-top" src=">" alt="Card image cap">
           </div>
           <div class="info">
             <div class="title">
               <a1 href="#">
-                <h2>Avengers: Endgame</h2>
+                <h2><?= $film['judul_film'] ?></h2>
               </a1>
-              <span>(2019)</span>
             </div>
             <div class="meta-actions">
-              <div class="score">
+              <!-- <div class="score">
                 <!-- <div class="percentage-circle">
                   <div class="percentage-circle-stroke">
                     <div class="percent">
@@ -39,7 +55,7 @@
                 </div>
                 <h1>User
                   <br>
-                  Score</h1> -->
+                  Score</h1>
               </div>
               <ul>
                 <li class="add-to-list">
@@ -47,10 +63,12 @@
                   <div class="tooltip"><i class="fas fa-list fa-2x"></i>
                     <span class="tooltiptext">Add to List</span>
                   </div></a1>
-                </li>
+                </li> -->
                 <li class="favorite">
                   <a1 href= "#">
-                  <div class="tooltip"><i class="fas fa-heart fa-2x"></i>
+                  <!-- <div class="tooltip"><i class="fas fa-heart fa-2x"></i> -->
+                    <a href="add_favorite.php?id=<?=$id?>&id_cont=<?=$film['id_film']?>" class="modal__btn" style="color: white;">
+                          <ion-icon name="add"></ion-icon>
                     <span class="tooltiptext">Favorite</span>
                   </div></a1>
                 </li>
@@ -86,12 +104,19 @@
       </div>
       </div>
     </div>
+      <?php
+                  }
+      ?>
+    </div>
   </div>
+  <?php
+      endforeach;
+    ?>
 </div>
 </section>
 </body>
 </html>
 <!-- partial -->
-  
+
 </body>
 </html>
