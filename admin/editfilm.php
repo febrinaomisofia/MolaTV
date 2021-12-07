@@ -111,7 +111,7 @@ include("sidebar.php");
                   <div class="form-group row">
                       <label class="col-sm-3 col-form-label">Trailer</label>
                       <div class="col-sm-9">
-                          <input class="form-control" type="link" name="trailer_film" value="<?php echo $pecah['treiler_film']; ?>">
+                          <input class="form-control" type="link" name="treiler_film" value="<?php echo $pecah['treiler_film']; ?>">
                       </div>
                   </div>
                   <button class="btn float-right mt-3 mb-3" type="submit" name="btn-upl" >Simpan</button>

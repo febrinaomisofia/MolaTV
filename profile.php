@@ -81,7 +81,7 @@ include("sidebarprofile.php");
           <label>subscription plan</label>
           <input class="form-control" type="text" value="" disabled>
         </div>
-        <a class="btn btn-danger" type="submit" href="#">Logout</a>
+        <a class="btn btn-danger" type="submit" href="logout.php">Logout</a>
       </form>
     </div>
   </div>

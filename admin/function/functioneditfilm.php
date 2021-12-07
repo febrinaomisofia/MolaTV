@@ -14,16 +14,16 @@
         $artis = $_POST['pemeran_film'];
         $durasi = $_POST['durasi_film'];
         $deskripsi = $_POST['deskripsi_film'];
-        $video = $_POST['trailer_film'];
+        $video = $_POST['treiler_film'];
         //$file_tmpVid = "trailer/".basename($_FILES['trailer_film']['name']);
 
         $query = "UPDATE film SET judul_film = '$judul', tahun_film = '$tahun', id_batas_usia = '$batas_usia', id_genre = '$genre', alur_film = '$alur', pemeran_film = '$artis', trailer_film = '$video', durasi_film = '$durasi', deskripsi_film = '$deskripsi' WHERE id_film = $id";
 
         echo $query;
 
-        $upd = mysqli_query($koneksi, $query);
-
-
-        header ("location: ../movies.php");
+        // $upd = mysqli_query($koneksi, $query);
+        //
+        //
+        // header ("location: ../movies.php");
     }
 ?>

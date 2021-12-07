@@ -31,11 +31,11 @@
   <div id="shell">
   <div class="box">
         <div class="head">
-          <h2 style="	font-size:14px; color: white;">Comedy</h2>
-          <p class="text-right"><a href="#">View all</a></p>
+          <!-- <h2 style="	font-size:14px; color: white;">Comedy</h2>
+          <p class="text-right"><a href="#">View all</a></p> -->
         </div>
         <?php
-      $query = mysqli_query($koneksi, "SELECT * FROM film ;");
+      $query = mysqli_query($koneksi, "SELECT * FROM film WHERE id_genre = 6 ;");
       foreach ($query as $q):
     ?>
         <div class="">

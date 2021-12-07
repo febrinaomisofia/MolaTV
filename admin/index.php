@@ -55,7 +55,7 @@ include("sidebar.php");
             <div class="card">
                 <i class="fa fa-sign-out fa-5x" style="margin-top: 15px"></i>
                 <h1>Logout</h1>
-                <a href="logout.php"><button><i class="fa fa-arrow-right"></i></button></a>
+                <a href="../logout.php"><button><i class="fa fa-arrow-right"></i></button></a>
             </div>
         </div>
     </div>
