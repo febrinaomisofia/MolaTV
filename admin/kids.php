@@ -1,4 +1,8 @@
 <?php
+  include ("include/koneksi.php");
+?>
+
+<?php
 include("sidebar.php");
 ?>
 
@@ -34,45 +38,43 @@ include("sidebar.php");
     <table class="table table-striped table-hover">
       <thead>
         <tr>
-          <th>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="selectAll">
-								<label for="selectAll"></label>
-							</span>
-          </th>
           <th>No</th>
           <th>Judul</th>
           <th>Durasi</th>
+          <th>Tahun</th>
           <th>Genre</th>
           <th>Sinopsis</th>
           <th>Trailer</th>
           <th>Cast</th>
+          <th>Batas Usia</th>
           <th>Aksi</th>
         </tr>
       </thead>
+     
+      <?php $query = mysqli_query($koneksi, "SELECT * FROM film a, genre b, batas_usia c 
+      WHERE a.id_genre = b.id_genre AND a.id_batas_usia = c.id_batas_usia"); ?>
+        <?php $no = 1;?>
+        <?php foreach ($query as $pecah) : ?>
+
       <tbody>
         <tr>
-          <td>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="checkbox1" name="options[]" value="1">
-								<label for="checkbox1"></label>
-							</span>
-          </td>
-          <td>1</td>
-          <td>BEE Movie</td>
-          <td>1h26m</td>
-          <td>Animation</td>
-          <td>Fresh out of college,
-            Barry the Bee (Jerry Seinfeld) finds the
-            prospect of working with honey uninspiring.</td>
-          <td>Trailer</td>
-          <td>JERRY SEINFELD</td>
+          <td><?php echo $no; ?></td>
+            <td><?php echo $pecah['judul_film']; ?></td>
+            <td><?php echo $pecah['durasi_film']; ?></td>
+            <td><?php echo $pecah['tahun_film']; ?></td>
+            <td><?php echo $pecah['genre']; ?></td>
+            <td><?php echo $pecah['deskripsi_film']; ?></td>
+            <td><?php echo $pecah['treiler_film']; ?></td>
+            <td><?php echo $pecah['pemeran_film']; ?></td>
+            <td><?php echo $pecah['batas_usia']; ?></td>
           <td>
             <a href="#editdataModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
             <a href="#deletedataModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
           </td>
         </tr>
       </tbody>
+      <?php $no++; ?>
+			<?php endforeach; ?>
     </table>
     <div class="clearfix">
       <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
