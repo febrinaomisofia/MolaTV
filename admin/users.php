@@ -19,8 +19,9 @@ include("sidebar.php");
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-  
+
 </head>
+
 <body>
 <!-- partial:index.partial.html -->
 <div class="container">
@@ -62,11 +63,11 @@ include("sidebar.php");
           <td><?php echo $pecah['phone_number']; ?></td>
           <td><?php echo $pecah['paket']; ?></td>
           <td>
-            <!-- <a data-target="#editdataModal" id="editdataModal class="edit" id="editdata" data-toggle="modal" data-id="<?= $pecah['user_id'];?>" 
+            <!-- <a data-target="#editdataModal" id="editdataModal class="edit" id="editdata" data-toggle="modal" data-id="<?= $pecah['user_id'];?>"
             data-user="<?= $pecah['username'];?>" data-emaill="<?= $pecah['email'];?>" data-date="<?= $pecah['date_of_birth'];?>"
             data-genderr="<?= $pecah['gender'];?>" data-phone="<?= $pecah['phone_number '];?>" data-pakett="<?= $pecah['paket'];?>"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
              -->
-            
+
             <a href="function/hapususer.php?id=<?php echo $pecah['id_user'];?>" onclick="return confirm('Apakah yakin ingin menghapus?'"  class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
           </td>
         </tr>
@@ -200,4 +201,3 @@ include("sidebar.php");
 
 </body>
 </html>
-
